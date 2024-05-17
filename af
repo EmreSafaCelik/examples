@@ -1,0 +1,237 @@
+[33mc5b7f1b6[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m internal change.
+[33mc701b89a[m internal change.
+[33m17bfc2e0[m update requirement to fix tflite-model-maker bug.
+[33m0bbf4fe4[m No description
+[33mcee4fd46[m No description
+[33m354d31d0[m No description
+[33ma55d9484[m Mirror tensorflow_hub's make_image_classifier API
+[33m548f701b[m Internal cleanup of python flatbuffers python imports.
+[33m6c25deac[m Publish sample app for acceleration service.
+[33maa6bb6a0[m Merge pull request #461 from jovianjaison/patch-1
+[33m80477dbe[m Fixed Broken/Outdated link
+[33me78dbcfa[m Removed `Android speech commands` in README.md file w.r.t cl/458357298
+[33mb0b0e9d0[m PR #456: Fix to version numbering so that it is in accordance with PEP 404
+[33meb5c7210[m   - fix image rendering #2
+[33mef4dc5ce[m Compute squared norms directly to avoid singularity in the gradient at zero.
+[33m1ca61321[m Merge pull request #455 from zehuiw/tflite-gen-ai-example
+[33m3304620c[m Add more code owners to cover TFLite related contents
+[33m0dd83ecb[m add default input configurations
+[33m011bc739[m improve documentations and code quanlity
+[33mb4eb09b4[m Silence some pytype errors.
+[33m05fa1309[m add ipynb link for generating tflite models
+[33ma23b78bb[m Silence some pytype errors.
+[33m372d8b2e[m Try to import tap from tensorflow.python.eager if import record fails.
+[33m87d09598[m add tflite generative ai example
+[33me3849ccb[m Split `eager/record.py` from `eager/tape.py`.
+[33m3df76a9e[m Update Podfiles for sound classification ios example to use newer versions.
+[33m7b1dbe68[m Make tensorflow examples lite/tools/build_ios_app.sh able to install the latest pod version.
+[33m4837a91a[m Update Podfiles for ios examples to use newer versions.
+[33m5bc9f1ed[m Fix pytype failures related to teaching pytype about NumPy scalar types.
+[33m729681c5[m No description
+[33m6d5dfdca[m No description
+[33mb9798935[m No description
+[33m0cc44f2e[m Removed `Android app` and `Android Jetpack Compose app` references from `README.md` file w.r.t cl/458357298
+[33m37df0b9a[m Send tensorflow docs and examples PRs to the docs-team.
+[33m1f5472d6[m Send unowned PRs to the docs team.
+[33mf2b560e3[m add default applicable_licenses
+[33ma71f7e38[m [Acceleration Service] Bump up the `tensorflow-lite-api` dependency version in `tflite_gpu`, `tflite_java` and `tflite_support` libraries.
+[33m1c1d108d[m[33m ([m[1;31morigin/tflmm/v0.4.2[m[33m)[m No description
+[33m6ae97eaf[m [NumPy] Remove references to deprecated NumPy type aliases.
+[33ma80e61f2[m [Acceleration Service] Update the `tflite_java` and `tflite_acceleration` libraries to use nightly `tensorflow-lite-api` dependency.
+[33m7ab6e39b[m Merge pull request #437 from utzcoz/robolectric-4.9
+[33mfe54fdd0[m Bump Robolectric to 4.9
+[33m2741b9ea[m PR #416: Updated Minimum Python version to 3.7
+[33me2510e7d[m Implement support for masking to BatchNormalization layer
+[33m46575d3d[m Preemptive fix in preparation for cl/481221824
+[33me3b24a96[m Reverse the order of efficientdet tflite.
+[33m964b8176[m Fix for model downloads
+[33m9aa7c9b5[m Updating URLs for model downloads
+[33m62a77d22[m Fixed missing MetalDelegate in style_transfer iOS app
+[33m9eb657f9[m Use @bazel_skylib's bazel version check instead of implementing our own.
+[33mbafa0d31[m No description
+[33md7a4680d[m No description
+[33m6642018e[m Added new audio classification iOS sample based on Task Library iOS.
+[33m8dcb8628[m Removed old sample.
+[33mc92e03d9[m Fixing paths in readmes for audio classification
+[33m56fe19ef[m Publishing new style transfer sample
+[33md5416a02[m Removing old style transfer example
+[33m7cb2b4dd[m Copying model personalization Android sample to public
+[33m9138a01a[m remove old android model_personalization sample
+[33m8ccfeb68[m Re-adding gradle.properties to image segmentation to fix building
+[33m624f74e9[m No description
+[33m0bde1b3a[m Moving digit classifier from experimental to public
+[33m0b0928aa[m Remove old digit classification sample
+[33mfc93e15b[m Moving new gesture classification sample to public
+[33mb86c4e39[m Removing older gesture classification sample for Android
+[33m833fe977[m Fix up icons
+[33m07ebfa6d[m Fix transforms
+[33m7746c454[m Clean up:
+[33m32b08072[m Code changes to get ready for an incoming Keras optimizer migration.
+[33me1eefee2[m Copybara and readme updates
+[33mcee7820f[m remove beta tag from play services interpreter api example
+[33m79815a16[m Make this code compatible with Python 3.10.
+[33m2bb82c42[m Update TFLite RL refapp to the latest TF/JAX/Flax version
+[33m3a214c7f[m Code changes for version safety.
+[33m26080748[m Code changes to get ready for an incoming Keras optimizer migration.
+[33m5d3579cb[m Updating play services task library object detection sample to release
+[33m210cf6e5[m Moving java image classification sample to public
+[33m6ef6ad4e[m Pass in new useGpu parameter for ImageClassificationHelper.
+[33m3712020b[m Add android:exported="true" tag to activities/services/receivers that specify an intent filter.
+[33m463fc1d5[m PR #421: Update - Object detection
+[33mc254e28e[m PR #420: Update - Image Classification
+[33m6d60b05f[m PR #423: Update - Audio Classification
+[33m62082b13[m PR #422: Update - Image Segmentation
+[33m9c53ebf6[m Add GPU support provided by Google Play Services
+[33mef99ca22[m Changing example images for obj detection
+[33m500881c3[m No description
+[33mdebb10c4[m Fixing path and removing erroneous committed gradlew files
+[33mfc50aca1[m Added an object detection sample for Android using the Task Library on Play Services
+[33mb421a795[m TFLite Model Maker: release a new version of model maker.
+[33m51da259f[m Add android:exported="true" tag to activities/services/receivers that specify an intent filter.
+[33me67a7a40[m depend on stable tensorflowjs version in model maker nightly pip package.
+[33m2511b3b2[m Copying bert qa android sample to repo
+[33m34a888ff[m Removed old bert qa sample for android
+[33me0644ca5[m Model Maker Searcher API: Read and write files with tf.io.gfile.GFile.
+[33m36d71271[m PR #417: Fixed broken link from Image_classification
+[33m5655d1ca[m Silence new type errors in Python 3.10.
+[33mfb7b0b5d[m Fixing image_segmentation android path
+[33m68b6bac8[m Publish new image segmentation android sample
+[33mf8f22181[m Delete old samples
+[33m5a9d297b[m No description
+[33mca5a4fbb[m Moving text and image classification examples
+[33m00dde4b7[m Removing old text and image classification examples
+[33m36fc24d0[m Model Maker: add kwargs parameter in image_searcher_dataloader to support load from binary.
+[33md69665ca[m Fixed script to copy gradlew
+[33ma0931955[m Updated directory path for readme in audio sample, fixed path for object detection images
+[33m42ad27ff[m Copied iOS and Raspberry Pi samples from sound_classification to audio_classification
+[33ma705ac71[m Added new Android sample for speech command and audio classification using Task Library.
+[33m71e6dd8b[m Removed deprecated Android samples for sound classification and speech commands
+[33m4943ea2b[m PR #401: Bump tensorflow from 2.6.3 to 2.7.2 in /lite/examples/reinforcement_learning/ml/tf_and_jax
+[33mf0cedeb3[m PR #402: Bump tensorflow from 2.6.3 to 2.7.2 in /lite/examples/reinforcement_learning/ml/tf_agents
+[33m2273c261[m Fix scann==1.2.6 in requirement.txt.
+[33m0354870f[m Change the keyword arguments `lr` to `learning_rate` since `lr` argument is deprecated.
+[33m3b54ebc2[m Migrate the image classification iOS sample app to use TFLite Task Library.
+[33m7a7cf7e0[m Fixed tflite-support and protobuf version
+[33m907a3e74[m Fix the link to image classification doc.
+[33m796bf844[m Migrate image segmentation TFLite iOS app to use TFLite Task Vision
+[33m88287d08[m Internal change
+[33m1d98844e[m Migrated TFLite Object Detection iOS sample to use TFLite Task Library Vision
+[33m23e9e2c4[m Migrated the TFLite object detection Android app
+[33m6df9f536[m Removed the legacy TFLite object detection Android sample.
+[33mff5a76bd[m Revamped the TFLite Android object detection sample
+[33m5666c051[m Revamped the TFLite Android object detection sample
+[33m40aab88c[m Copybara import of the project:
+[33mc62c9ec4[m use tf.io.gfile to open file in metadata_writer.
+[33m1e78e117[m change tflite-support to tflite-support-nightly in model maker stable dependency.
+[33m3280c585[m Copybara import of the project:
+[33mf0e6d31d[m PR #394: Update - Image Segmentation TFLite Task Library
+[33m9a846e07[m Use full text for Android sample categories
+[33m49e7777a[m PR #392: Update - Image Classification TFLite Task Library
+[33m8fe47b52[m Fix text rendering in Android Studio
+[33m3cbfbf0e[m Add log to track the process when loading data for Model Maker Searcher.
+[33mef9fcf96[m Always set num of gpus to 0 when distribution strategy is off.
+[33mbf193f68[m Updated text_searcher preset queries and model
+[33me04f0149[m[33m ([m[1;31morigin/tflmm/v0.4.0[m[33m)[m Fix typo
+[33m022b989a[m Fix a bug where evaluating multiple checkpoints using EfficientDet would fail.
+[33m52dd25ba[m Migrated object_detection and audio classification TFLite Raspberry Pi app to use TFLite Task Library.
+[33mcdd4fc7d[m PR #387: Added the TextSearcher Android sample app
+[33m628cf503[m release the new 0.4.0 version of tflite-model-maker.
+[33m66f60ebc[m internal change.
+[33md1639b9b[m Model Maker Searcher API: add api mm_export decorator for the `searcher` module.
+[33m597b6cd8[m Model Maker Searcher API: Add searcher and scann converter.
+[33me330622e[m Update dependency version for TFLite RL refapp
+[33m47152a2e[m Model Maker Searcher DataLoader: add api mm_export decorator to the classes we'd like to expose.
+[33m7e028e60[m Moved image_utils into task folder.
+[33m4de7b0de[m Model Maker: add l2_normalize parameter in the Searcher DataLoader.
+[33m2c270f2a[m nit: Update the description for image_searcher.DataLoader.
+[33mad0e438d[m fix the test failure for image searcher dataloader.
+[33m7f254b19[m add DataLoader for Model Maker Searcher API.
+[33m5d9aea73[m PR #378: added bgr to rgb conversion
+[33m5e402667[m Add packaging metadata for Play Services image classification sample.
+[33m83838d74[m Update the TF Lite / Play Services README
+[33m3378631e[m PR #382:  OCR Android example upgrade Opencv library version to 4.5.3.0
+[33ma4d7147d[m PR #384: Update minimum Android studio version to 4.2
+[33m8fee27e1[m PR #383: Fixing sound classifier example app crash for the first time launch
+[33m851f6e9d[m PR #370: Upgrade 'com.android.tools.build:gradle' version to 4.2.0
+[33mf67a01da[m Replace SingleOpModel::InvokeUnchecked calls with Invoke in test code.
+[33m085ea226[m Avoid comparing tf.__version__ as string.
+[33m50aa4514[m Add instrumentation test for sample app.
+[33m55398123[m Properly assert the SingleOpModel(test utility) invocation's success
+[33ma7064dbb[m Change the MAX_RESULTS of ImageClassificationHelper as a constructor parameter instead of a static value.
+[33m8c01781c[m Add the Java version of the sample app, and update the README file.
+[33mf0bba417[m Refactor the kotlin source code from app/src/main to app/src/kotlin.
+[33m85181cdb[m Explicitly import estimator from tensorflow as a separate import instead of accessing it via tf.estimator and depend on the tensorflow estimator target.
+[33ma176c847[m Remove unused comments related to Python 2 compatibility.
+[33m95f42609[m Remove unused comments related to Python 2 compatibility.
+[33m95c25641[m update the url of movielens from http to https in the recommendation.
+[33m7b53db0d[m Fixed RPi audio classification bug.
+[33m79d3c093[m Add comment about SDK requirement in AndroidManifest.
+[33m44adaed6[m Fix the package name in build.gradle file, and add comment for SDK requirement.
+[33ma9265a99[m TFLite Model Maker: Updates from_csv function in Text Classification DataLoader.
+[33mc027b793[m No description
+[33m56524742[m Small fix of README.
+[33m0a735a48[m README file of sample app.
+[33m011fb3e6[m Sample app use tflite in play services for image classification.
+[33m035fb73d[m Internal change
+[33m110c2fd1[m Updated dependency version
+[33m84b1eeb9[m PR #372: Bump numpy from 1.19.5 to 1.21.0 in /lite/examples/reinforcement_learning/ml/tf_agents
+[33m6dfa9c6b[m PR #371: Bump numpy from 1.19.5 to 1.21.0 in /lite/examples/reinforcement_learning/ml/tf_and_jax
+[33m4fabfa3b[m PR #374: Add video classification Android UI
+[33m97dd38c3[m Enable dynamic range quant by default in the Python API
+[33m3a5e14a8[m Added video classification TFLite Raspberry Pi sample.
+[33me3aef06d[m Added TFLite logic for video classification Raspberry Pi sample.
+[33mc003bd08[m No description
+[33m21624a63[m internal change.
+[33m86e95a59[m PR #373: Added video classification TFLite code.
+[33m50872d6b[m update default spec to mobilebert_classifier.
+[33m82425dba[m Implemented UI for audio_classification Raspberry Pi sample.
+[33mbf98ede4[m PR #360: mavenCentral()
+[33m963b5957[m Added logic for TFLite audio classifier Raspberry Pi example.
+[33md315ddb9[m Changed sonartype Maven repo URL to HTTPS.
+[33mebc56dc5[m Updated incorrect API doc.
+[33mf29a3a02[m Add codeowners for OSS /tensorflow_examples/lite directory.
+[33meb925e46[m   Minor updates to the documentation.
+[33m2584b5d2[m PR #365: Correctly draw the selected state of the Switch
+[33mf65941e1[m Updated pose estimation Android readme to mention MoveNet MultiPose.
+[33mba110e14[m Improve error message of pose classification when there's not enough visible keypoints to run the classifier.
+[33m189c662d[m test
+[33mf38e125d[m Fix some doc
+[33m6a5c4df8[m Add scope reuse support.
+[33m91c5436c[m Added TFLite Raspberry Pi (Python) image segmentation sample app.
+[33m040b3275[m ...Internal refactor...
+[33m1e624527[m Refactored the TFLite image classification Raspberry Pi sample app.
+[33m2d6df0e2[m Added Python (RPi) image segmentation model wrapper that resembles TFLite Task Library API
+[33m2fdc000e[m Added TFLite Task Library-like Python wrapper for image classification.
+[33m11a43d80[m Fix "view source" links for model_maker.
+[33m50efb8d5[m remove tensorflow_estimator requirement.
+[33m5cbc2b8d[m update tflite-support version
+[33me120e031[m Relaxed numpy version requirements for TFLite RPi samples. Fixed broken ODT test.
+[33m8e74d98d[m Map TODO to an issue in the tracker.
+[33m8cb3e3ad[m Clean up a TODO comment.
+[33m92955191[m Reduce a GIF file size.
+[33m065790d7[m update tensorflow version in requirement_nightly.
+[33m94ee1cac[m Update ref apps to use TFLite Support 0.3
+[33m8737fbd8[m   Minor aesthetic changes.
+[33ma93d0e72[m Model Maker: update matplotlib<3.5.0 in requirements.
+[33m1b39bf2c[m   Aesthetic fix for README.md.
+[33m6e73f65d[m Add the Classification-by-Retrieval library and iOS app.
+[33mf55194ad[m Update TFLite concrete function conversion codes to have the associated trackable object.
+[33m1f7a7804[m Merge pull request #359 from khanhlvg:master
+[33m7a942668[m Fixed minor bug
+[33m0f5e4e34[m Added MoveNet MultiPose to Adroid pose estimation sample.
+[33mc930d0af[m[33m ([m[1;31morigin/joefernandez-tf-od-android[m[33m)[m Merge pull request #357 from khanhlvg:master
+[33m9271cfa1[m Minor adjustment to MoveNet.MultiPose
+[33m15980eb4[m Added MoveNet.MultiPose model to TFLite pose_estimation sample and enable users to use it.
+[33mc7e9bdeb[m internal changes
+[33mdb4c7630[m Unified assertEquals
+[33m35ba84b5[m Revert unrelated change.
+[33m1099755c[m Merge remote-tracking branch 'origin'
+[33m7574e734[m Reverted unrelated changes
+[33m99a07b97[m Merge branch 'khanhlvg/master'
+[33m88748850[m Fix feedback comments.
+[33m1ba4f796[m Reduce the size of the app preview image and align center.
+[33m28be03ad[m Add Python implementation of TFLite MoveNet.MultiPose model.
+[33m03f79659[m Prevent running build script with unsupported example
+[33m4440aff1[m Updated assert code in tracker test cases.
+[33m7b92d817[m Updated Android pose estimation data classes to support Multipose models Add MultiPose tracker logic
+[33md89a6452[m Change the tf-nightly dependency to tensorflow>=2.

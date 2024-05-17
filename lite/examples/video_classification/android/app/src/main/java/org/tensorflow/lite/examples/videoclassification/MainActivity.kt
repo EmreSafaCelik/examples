@@ -44,6 +44,12 @@ import org.tensorflow.lite.examples.videoclassification.ml.VideoClassifier
 import org.tensorflow.lite.support.label.Category
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
+import android.content.Context
+import android.media.AudioManager
+import android.media.AudioFormat
+import android.media.AudioTrack
+import kotlin.experimental.and
+
 
 @androidx.camera.core.ExperimentalGetImage
 @androidx.camera.camera2.interop.ExperimentalCamera2Interop
@@ -56,7 +62,7 @@ class MainActivity : AppCompatActivity() {
         private const val MODEL_MOVINET_A0_FILE = "movinet_a0_stream_int8.tflite"
         private const val MODEL_MOVINET_A1_FILE = "movinet_a1_stream_int8.tflite"
         private const val MODEL_MOVINET_A2_FILE = "movinet_a2_stream_int8.tflite"
-        private const val MODEL_LABEL_FILE = "kinetics600_label_map.txt"
+        private const val MODEL_LABEL_FILE = "gestures5_label_map.txt"
         private const val MODEL_FPS = 5 // Ensure the input images are fed to the model at this fps.
         private const val MODEL_FPS_ERROR_RANGE = 0.1 // Acceptable error range in fps.
         private const val MAX_CAPTURE_FPS = 20
@@ -184,7 +190,7 @@ class MainActivity : AppCompatActivity() {
             val cameraProvider: ProcessCameraProvider = cameraProviderFuture.get()
 
             // Select back camera as a default
-            val cameraSelector = CameraSelector.DEFAULT_BACK_CAMERA
+            val cameraSelector = CameraSelector.DEFAULT_FRONT_CAMERA
 
             // Create a Preview to show the image captured by the camera on screen.
             val preview = Preview.Builder()
@@ -359,8 +365,52 @@ class MainActivity : AppCompatActivity() {
      * Show the video classification results on the screen.
      */
     private fun showResults(labels: List<Category>, inferenceTime: Long, inputFps: Float) {
+        val audioManager = this.getSystemService(Context.AUDIO_SERVICE) as AudioManager
+
+        fun playTone(frequency: Double, duration: Int, sampleRate: Int = 44100) {
+            val numSamples = duration * sampleRate
+            val sample = DoubleArray(numSamples)
+            val generatedSnd = ByteArray(2 * numSamples)
+
+            for (i in 0 until numSamples) {
+                sample[i] = Math.sin(2 * Math.PI * i / (sampleRate / frequency))
+            }
+
+            var idx = 0
+
+            for (dVal in sample) {
+                val valShort = (dVal * 32676).toInt().toShort()
+                generatedSnd[idx++] = (valShort and 0x00ff).toByte()
+                generatedSnd[idx++] = ((valShort and 0x00ff).toUShort()).toByte()
+            }
+
+            val audioTrack = AudioTrack(AudioManager.STREAM_MUSIC,
+                sampleRate, AudioFormat.CHANNEL_OUT_MONO,
+                AudioFormat.ENCODING_PCM_16BIT, numSamples * 2,
+                AudioTrack.MODE_STATIC)
+
+            audioTrack.write(generatedSnd, 0, generatedSnd.size)
+            audioTrack.play()
+        }
+
         runOnUiThread {
             binding.bottomSheet.tvDetectedItem0.text = labels[0].label
+            if (labels[0].label == "empty" && labels[0].score > 0.5) {
+                videoClassifier?.reset()
+            }
+            if (labels[0].score > 0.7) {
+                Log.d("CONFIDENCE", "CONFIDENCE HIGH")
+                when {
+                    labels[0].label == "right" -> audioManager.adjustVolume(AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI)
+                    labels[0].label == "left" -> audioManager.adjustVolume(AudioManager.ADJUST_LOWER, AudioManager.FLAG_SHOW_UI)
+//                    labels[0].label == "four" -> audioManager.adjustVolume(AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI)
+//                    labels[0].label == "small" -> audioManager.adjustVolume(AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI)
+//                    labels[0].label == "me" -> audioManager.adjustVolume(AudioManager.ADJUST_RAISE, AudioManager.FLAG_SHOW_UI)
+                }
+                videoClassifier?.reset()
+                playTone(523.25, 1)  // Plays a C5 note for 1 second
+            }
+
             binding.bottomSheet.tvDetectedItem1.text = labels[1].label
             binding.bottomSheet.tvDetectedItem2.text = labels[2].label
             binding.bottomSheet.tvDetectedItem0Value.text = labels[0].score.toString()

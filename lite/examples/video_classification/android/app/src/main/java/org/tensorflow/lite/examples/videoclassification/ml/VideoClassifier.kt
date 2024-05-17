@@ -18,6 +18,8 @@ package org.tensorflow.lite.examples.videoclassification.ml
 
 import android.content.Context
 import android.graphics.Bitmap
+import android.util.Log
+import android.util.Printer
 import android.util.Size
 import org.tensorflow.lite.DataType
 import org.tensorflow.lite.Interpreter
@@ -33,6 +35,8 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 import kotlin.math.max
 import kotlin.math.min
+import org.tensorflow.lite.flex.FlexDelegate
+
 
 class VideoClassifier private constructor(
     private val interpreter: Interpreter,
@@ -101,7 +105,10 @@ class VideoClassifier private constructor(
 
             // Initialize a ByteBuffer filled with zeros as an initial input of the TFLite model.
             val tensor = interpreter.getInputTensorFromSignature(inputName, SIGNATURE_KEY)
-            val byteBuffer = ByteBuffer.allocateDirect(tensor.numBytes())
+
+            var numBytes = tensor.numBytes()
+
+            val byteBuffer = ByteBuffer.allocateDirect(numBytes)
             byteBuffer.order(ByteOrder.nativeOrder())
             inputs[inputName] = byteBuffer
         }
@@ -115,9 +122,11 @@ class VideoClassifier private constructor(
     private fun initializeOutput(): HashMap<String, Any> {
         val outputs = HashMap<String, Any>()
         for (outputName in interpreter.getSignatureOutputs(SIGNATURE_KEY)) {
-            // Initialize a ByteBuffer to store the output of the TFLite model.
             val tensor = interpreter.getOutputTensorFromSignature(outputName, SIGNATURE_KEY)
-            val byteBuffer = ByteBuffer.allocateDirect(tensor.numBytes())
+            // Allocate ByteBuffer with the correct size
+            var numBytes = tensor.numBytes()
+
+            val byteBuffer = ByteBuffer.allocateDirect(numBytes)
             byteBuffer.order(ByteOrder.nativeOrder())
             outputs[outputName] = byteBuffer
         }
